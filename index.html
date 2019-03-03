@@ -1,0 +1,92 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="ja" />
+<title>
+花粉（環境省）
+</title>
+</head>
+<body>
+
+<h1>花粉（環境省）</h1>
+<p id="ymd"></p>
+
+<a href="http://www.geocities.jp/matsgth/kahun-env.html" target="_blank">環境省</a>/<a href="http://www.morohosi-jibika.jp/link.htm">もろほしクリニック</a>/<a href="https://nagakura-ac.com/blog" target="_blank">品川</a>/<a href="http://seesaawiki.jp/cocone-extra-lessons/lite/d/%A5%A2%A5%D0%A5%A6%A5%C8%A4%CA%B2%D6%CA%B4%BE%F0%CA%F3%A1%D6%BB%C4%A4%EA%A4%A2%A4%C8%B2%BF%A1%F3%A1%A9%A1%D7" target="_blank">アバウト</a>
+<br>
+<a href="http://www.fukushihoken.metro.tokyo.jp/allergy/pollen/index.html" target="_blank">東京都の花粉情報</a>/<a href="http://kafun.taiki.go.jp/Map.aspx?AreaCode=03" target="_blank">環境省</a>/<a href="http://pollen.tokyo-kafun.jp/kafun/index.php?action=KafunMapNew" target="_blank">濃度</a>/<a href="http://pollen.tokyo-kafun.jp/kafun/index.php?action=KafunMapYohoNew" target="_blank">予測</a>/<a href="http://pollen.tokyo-kafun.jp" target="_blank">東京</a>
+<br>
+<a href="http://www.geocities.jp/matsgth/kahun-tokyo-daily.html" target="_blank">今日</a>/<a href="http://www.geocities.jp/matsgth/kahun-tokyo-weekly.html" target="_blank">週</a>/<a href="http://www.geocities.jp/matsgth/kahun-tokyo-season.html" target="_blank">シーズン</a>/<a href="http://www.tokyo-eiken.go.jp/kj_kankyo/kafun/h30/goukei/" target="_blank">累積値</a>
+
+<div data-role='page'>
+
+<script>
+now  = new Date();
+
+date = new Date;
+year = now.getFullYear();
+y = now.getFullYear();
+m = now.getMonth() + 1;
+d = now.getDate();
+
+m = ('0' + m).slice(-2);
+d = ('0' + d).slice(-2);
+y = String(y);
+year = String(year);
+
+ymd = year + m + d;
+
+document.getElementById("ymd").innerHTML=ymd;
+
+/*
+
+document.getElementById("m").innerHTML=m;
+document.getElementById("d").innerHTML=d;
+document.getElementById("y").innerHTML=y;
+
+document.getElementById("ymd").innerHTML= year + m + d;
+
+*/
+
+//document.getElementById("ymd").innerHTML= ymd;
+
+
+//document.getElementById("m").innerHTML=month + 1;
+//document.getElementById("ymd").innerHTML=ymd;
+//document.getElementById("y").innerHTML=year;
+
+ar = new Array (
+   ["新宿区役所第二分庁舎／東京都新宿区新宿5丁目18-21（2019年より）","51320100"],
+   ["東京都多摩小平保健所／東京都小平市花小金井","51310200"],
+   ["独立行政法人森林総研多摩森林科学園／東京都八王子市廿里町","51320100"],
+   ["川崎生命科学・環境研究センター／神奈川県川崎市","51410200"],
+   ["飯能市役所／埼玉県","51120300"],
+   ["東邦大学／千葉県","51210100"],
+   ["日本医科大学付属多摩永山病院／東京都多摩市永山（2019年なし）","51300100"],
+   ["日本医科大学付属病院／東京都文京区千駄木（2017年 ... なし）","51300200"]
+);
+
+//document.write(ymd);
+
+
+for (y=0; y<ar.length; y++){
+
+document.write("<hr>");
+document.write("●",ar[y][0],"（",ar[y][1],"）<br>");
+
+for (x=0; x<ar[y].length; x++){
+//document.write( "ar[",y,"][",x,"]=", ar[y][x], "<BR>" );
+
+}
+document.write("<img src=\"http://kafun.taiki.go.jp/Gazou/Graph/Week/gw",ymd,ar[y][1],".png\" width=600 height=300>","<br>");
+document.write("<img src=\"http://kafun.taiki.go.jp/Gazou/Graph/Season/gs",year,ar[y][1],".png\" width=600 height=300>","<br>");
+
+}
+
+
+</script>
+
+</div>
+
+</body>
+</html>
