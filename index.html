@@ -9,8 +9,7 @@
 </head>
 <body>
 
-<h1>花粉</h1>
-<p id="ymd"></p>
+<h1>花粉</h1><p id="ymd"></p>
 
 <h2>情報</h2>
 <a href="http://www.geocities.jp/matsgth/kahun-env.html" target="_blank">x環境省</a>
@@ -22,8 +21,6 @@
 <a href="http://www.morohosi-jibika.jp/link.htm">もろほしクリニック</a>/<a href="https://nagakura-ac.com/blog" target="_blank">品川</a>
 
 <h2>グラフ〜他サイト、ポールンロボ</h2>
-<br>
-<br>
 <a href="http://n85.s58.xrea.com/pollen/index.html" target="_blank">全国市区町村ごとの花粉飛散数グラフ（1時間ごと/日ごと）-インデックス</a>
 
 <br>
@@ -49,42 +46,26 @@
 
 <div data-role='page'>
 
-   <script>
-      now  = new Date();
-      
-      date = new Date;
-      year = now.getFullYear();
-      y = now.getFullYear();
-      m = now.getMonth() + 1;
-      d = now.getDate();
-      
-      m = ('0' + m).slice(-2);
-      d = ('0' + d).slice(-2);
-      y = String(y);
-      year = String(year);
-      
-      ymd = year + m + d;
-      
-      document.getElementById("ymd").innerHTML=ymd;
-      
-      /*
-      
-      document.getElementById("m").innerHTML=m;
-      document.getElementById("d").innerHTML=d;
-      document.getElementById("y").innerHTML=y;
-      
-      document.getElementById("ymd").innerHTML= year + m + d;
-      
-      */
-      
-      //document.getElementById("ymd").innerHTML= ymd;
-      
-      
-      //document.getElementById("m").innerHTML=month + 1;
-      //document.getElementById("ymd").innerHTML=ymd;
-      //document.getElementById("y").innerHTML=year;
-      
-      </script>
+<script>
+   now  = new Date();
+   
+   date = new Date;
+   year = now.getFullYear();
+   y = now.getFullYear();
+   m = now.getMonth() + 1;
+   d = now.getDate();
+   
+   m = ('0' + m).slice(-2);
+   d = ('0' + d).slice(-2);
+   y = String(y);
+   year = String(year);
+   
+   ymd = year + m + d;
+   
+   document.getElementById("ymd").innerHTML=ymd;
+   
+</script>
+
 </div>
 
 </body>
